@@ -1,7 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+
 import { AppState } from "./store";
 import { counterAdd, counterDown } from "./store/actions";
+
 import "./App.css";
 
 const mapStateToProps = (state: AppState) => {
@@ -28,10 +30,7 @@ const App: React.FC<IProps> = (props: IProps) => {
   );
 };
 
-export default connect(
-  mapStateToProps,
-  {
-    counterAdd,
-    counterDown
-  }
-)(App);
+export default connect(mapStateToProps, {
+  counterAdd,
+  counterDown
+})(App);
